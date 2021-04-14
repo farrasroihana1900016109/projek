@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
   },
   {
+    path:'public',
+    loadChildren:()=>import('./public/public.module').then(mod=>mod.PublicModule)
+  },
+  {
     path:'',
     pathMatch:'full',
     redirectTo:'/login'

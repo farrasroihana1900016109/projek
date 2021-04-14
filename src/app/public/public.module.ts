@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { PublicComponent } from './public.component';
+import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path:'',
-    component:AdminComponent,
+    component:PublicComponent,
     children:[
       {
-        path:'dashboard',
-        component:DashboardComponent
+        path:'home',
+        component:HomeComponent
       }
     ]
   }
 ]
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent],
+  declarations: [PublicComponent, HomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ]
 })
-export class AdminModule { }
+export class PublicModule { }
