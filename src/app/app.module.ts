@@ -8,7 +8,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //material design
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MaterialDesign } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MaterialDesign
   ],
   providers: [],
   bootstrap: [AppComponent]
