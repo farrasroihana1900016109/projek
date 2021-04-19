@@ -12,11 +12,14 @@ import { MaterialDesign } from './material/material.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ForgotComponent } from './auth/forgot/forgot.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MaterialDesign,
     MatSidenavModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

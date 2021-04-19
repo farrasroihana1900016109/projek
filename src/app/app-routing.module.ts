@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForgotComponent } from './auth/forgot/forgot.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path:'admin',
     loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
+  },
+  {
+    path:'forgot',
+    component:ForgotComponent
   },
   {
     path:'public',
