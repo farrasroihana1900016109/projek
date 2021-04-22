@@ -49,6 +49,7 @@ delete(url: any)
   this.getToken();
   return this.http.delete(this.serverUrl+url,this.httpOptions);
  }
+ 
 
  //register
  register(email: any,password: any)
