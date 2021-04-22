@@ -5,9 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialDesign } from '../material/material.module';
 import { ImageComponent } from './image/image.component';
-import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {
@@ -31,7 +31,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, ImageComponent, ProductDetailComponent],
+  declarations: [AdminComponent, DashboardComponent, ImageComponent, ProductDetailComponent, ProductComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
