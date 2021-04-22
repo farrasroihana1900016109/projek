@@ -8,6 +8,7 @@ import { ImageComponent } from './image/image.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, ImageComponent, ProductDetailComponent, ProductComponent],
+  declarations: [AdminComponent, DashboardComponent, ImageComponent, ProductDetailComponent, ProductComponent, FileUploaderComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

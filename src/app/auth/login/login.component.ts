@@ -16,6 +16,7 @@ user:any={};
 
   ngOnInit(): void {
   }
+  hide:boolean=true;
   login()
   {
     this.api.login(this.user.email, this.user.password).subscribe(res=>{

@@ -9,7 +9,7 @@
     <mat-card-content>
         <div class='uk-flex'>
             <span class="uk-width-expand"></span>
-            <button mat-flat-button color="primary" (click)="ProductDetail({},-1)">Tambah Product</button>
+            <button mat-flat-button color="primary" (click)="productDetail({},-1)">Tambah Product</button>
         </div>
         <table class="uk-table uk-table-middle uk-table-divider">
             <thead>
@@ -34,8 +34,8 @@
                     <td>{{book.isbn}}</td>
                     <td>{{book.price}}</td>
                     <td align="right">
-                     
-                        <button mat-button color="primary" (click)="ProductDetail(book,idx)">Edit</button>
+                        <button mat-button color="primary" (click)="uploadFile(book)">Upload</button>
+                        <button mat-button color="primary" (click)="productDetail(book,idx)">Edit</button>
                         <button mat-button color="accent" (click)="DeleteProduct(book.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Menghapus..':'Delete'}}</button>
                     </td>
                 </tr>
