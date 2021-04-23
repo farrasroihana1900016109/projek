@@ -46,6 +46,7 @@ export class FileUploaderComponent implements OnInit {
    {
      //lakukan update data produk disini
      this.updateBook(data);
+     //
      alert('File berhasil diunggah');
      //kode tambahan
      this.loadingUpload=false;
