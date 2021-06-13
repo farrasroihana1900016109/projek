@@ -1,29 +1,33 @@
 <h3 mat-dialog-title>
-    Detail Produk
- </h3>
- <div mat-dialog-content>
+    Detail Pesanan
+</h3>
+<div mat-dialog-content>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Judul</mat-label>
-        <input matInput [(ngModel)]="data.title">      
+        <mat-label>No Trans</mat-label>
+        <input matInput [(ngModel)]="data.title">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Penulis</mat-label>
-        <input matInput [(ngModel)]="data.author" >     
+        <mat-label>No Nota</mat-label>
+        <input matInput [(ngModel)]="data.text">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Penerbit</mat-label>
-        <input matInput [(ngModel)]="data.publisher" >     
+        <mat-label>Tanggal Trans</mat-label>
+        <input matInput [(ngModel)]="data.date">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>ISBN</mat-label>
-        <input matInput [(ngModel)]="data.isbn" >     
+        <mat-label>Nama Pelanggan</mat-label>
+        <input matInput [(ngModel)]="data.author">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Harga</mat-label>
-        <input matInput type="number" [(ngModel)]="data.price" >      
+        <mat-label>Total Harga</mat-label>
+        <input matInput [(ngModel)]="data.price">
     </mat-form-field>
- </div>
- <div mat-dialog-actions align="end">
- <button mat-button mat-dialog-close>Batal</button>
- <button mat-flat-button (click)="saveData()">Simpan</button>
- </div>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Tanggal Kembali</mat-label>
+        <input matInput [(ngModel)]="data.detail">
+    </mat-form-field>
+</div>
+<div mat-dialog-action align="end">
+<button mat-button mat-dialog-close>Batal</button>
+<button mat-flat-button (click)="saveData()"[disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+</div>

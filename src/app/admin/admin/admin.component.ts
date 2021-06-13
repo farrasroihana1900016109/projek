@@ -5,7 +5,7 @@ import { ApiService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
 
@@ -51,7 +51,7 @@ export class AdminComponent implements OnInit {
           name:'Product',
           icon:'production_quantity_limits',
           url:'/admin/product'
-        },
+        }
       ]
     }
   ];

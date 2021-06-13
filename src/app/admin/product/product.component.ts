@@ -8,7 +8,7 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
   title:any;
@@ -24,12 +24,12 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.title='Product';
     this.book={
-      title:'angular pertama',
-      author:'afnanda',
-      publisher:'ada aja',
-      year:2020,
-      isbn:'244242',
-      price:3000000
+      title:'angular',
+      author:'rijal',
+      publisher:'saya',
+      year:2021,
+      isbn:'564545',
+      price:1000000
     };
     this.getBooks();
   }
@@ -47,7 +47,7 @@ export class ProductComponent implements OnInit {
   }
 
 
-    productDetail(data: any,idx: number)
+    ProductDetail(data: any,idx: number)
     {
       let dialog= this.dialog.open(ProductDetailComponent, {
           width: '400px',
@@ -80,20 +80,20 @@ export class ProductComponent implements OnInit {
         }
       }
 
-      uploadFile(data: any)
+
+      Uploadfile(data: any)
       {
-        let dialog= this.dialog.open(FileUploaderComponent, {
-          width: '400px',
-          data:data
+        let dialog= this.dialog.open(FileUploaderComponent  , {
+          width: '500px',
+          data: data
       });
         dialog.afterClosed().subscribe(result=> {
-         return;
-        })
+        return;
+        })      
       }
 
-      downloadFile(data: any)
+      downloadFile(data:any)
       {
-        FileSaver.saveAs('http:api.sunhouse.co.id/bookstore/'+data.url);
+        FileSaver.saveAs('http://api.sunhouse.co.id/bookstore/'+data.url);
       }
-
     }

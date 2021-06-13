@@ -9,27 +9,28 @@
     <mat-card-content>
         <div class='uk-flex'>
             <span class="uk-width-expand"></span>
-            <button mat-flat-button color="primary" (click)="productDetail({},-1)">Tambah Product</button>
+            <button mat-flat-button color="primary" (click)="ProductDetail({},-1)">Tambah Pesanan</button>
         </div>
         <table class="uk-table uk-table-middle uk-table-divider">
             <thead>
                 <th></th>
-                <th>No</th>
-                <th>Judul</th>
-                <th>Penulis</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>ISBN</th>
-                <th>Harga</th>
+                <th>No Trans</th>
+                <th>No Nota</th>
+                <th>Tanggal Trans</th>
+                <th>Nama Pelanggan</th>
+                <th>Total Harga</th>
+                <th>Tanggal Kembali</th>
+                <th>Denda</th>
                 <th align="right"></th>
             </thead>
             <tbody>
                 <tr *ngFor="let book of books; let idx=index">
-                  <td>
-                      <button mat-icon-button *ngIf="book.url != ''">
-                          <mat-icon>download</mat-icon>
-                      </button>
-                  </td>
+                    <td>
+                        <button mat-icon-button (click)="downloadFile(book)" *ngIf="book.url != ''">
+                            <mat-icon>download</mat-icon>
+                        </button>
+                     
+                    </td>
                     <td>{{idx+1}}</td>
                     <td>{{book.title}}</td>
                     <td>{{book.author}}</td>
@@ -38,8 +39,8 @@
                     <td>{{book.isbn}}</td>
                     <td>{{book.price}}</td>
                     <td align="right">
-                        <button mat-button color="primary" (click)="uploadFile(book)">Upload</button>
-                        <button mat-button color="primary" (click)="productDetail(book,idx)">Edit</button>
+                        <button mat-button color="primary" (click)="Uploadfile(book)">Upload</button>
+                        <button mat-button color="primary" (click)="ProductDetail(book,idx)">Edit</button>
                         <button mat-button color="accent" (click)="DeleteProduct(book.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Menghapus..':'Delete'}}</button>
                     </td>
                 </tr>

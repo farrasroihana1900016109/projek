@@ -1,16 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "173f754a-5fb4-41ce-89cf-f96c2be958d2"
+    "analytics": false
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myangular": {
+    "angular": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       },
       "root": "",
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myangular",
+            "outputPath": "dist/angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,12 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-
-              "src/styles.css",
-              "./node_modules/uikit/dist/css/uikit.min.css",
-              "./node_modules/uikit/dist/css/uikit-core.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -58,13 +54,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 }
               ]
             }
@@ -73,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myangular:build"
+            "browserTarget": "angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myangular:build:production"
+              "browserTarget": "angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myangular:build"
+            "browserTarget": "angular:build"
           }
         },
         "test": {
@@ -100,9 +96,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css",
-              "./node_modules/uikit/dist/css/uikit.min.css",
-              "./node_modules/uikit/dist/css/uikit-core.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -124,16 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myangular:serve"
+            "devServerTarget": "angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myangular:serve:production"
+              "devServerTarget": "angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "myangular"
+  "defaultProject": "angular"
 }

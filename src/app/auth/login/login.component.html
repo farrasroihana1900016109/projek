@@ -1,29 +1,30 @@
 <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport">  
-  <mat-card class="uk-width-1-3@m">
-      <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
-          <h3>Login</h3>
-      </div>
-    <mat-card-content>
-      <mat-form-field class="uk-width-1-1" appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Ex. email@domain.com" [(ngModel)]="user.email">
-        </mat-form-field>
-
+  <div class="uk-background-fixed uk-background-center-center uk-height-medium uk-width-large" style="background-image: url(data:image/png;base64,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);"></div>
+    <mat-card class="uk-width-1-3@m">
+        <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+            <h3>Login</h3>
+        </div>
+      <mat-card-content>
         <mat-form-field class="uk-width-1-1" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password" required>
-          <button mat-icon-button matSuffix (click)="hide = !hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-
-        </mat-form-field>
-          <div class="uk-flex uk-flex-right">
-              <div class="uk-width-expand">
-                <button mat-button routerLink="/register">Create Account</button>
-                <button mat-button routerLink="/forgot">Forgot</button>
-              </div>
-              <button mat-raised-button color="primary" (click)="login()">LOGIN</button>
-          </div>
-      </mat-card-content>
-    </mat-card>
-</div>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ex. email@domain.com" [(ngModel)]="user.email">
+          </mat-form-field>
+  
+          <mat-form-field class="uk-width-1-1" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+  
+          </mat-form-field>
+            <div class="uk-flex uk-flex-right">
+                <div class="uk-width-expand">
+                  <button mat-button routerLink="/register">Create Account</button>
+                  <button mat-button routerLink="/forgot">Forgot</button>
+                </div>
+                <button mat-raised-button color="primary" (click)="login()">LOGIN</button>
+            </div>
+        </mat-card-content>
+      </mat-card>
+  </div>

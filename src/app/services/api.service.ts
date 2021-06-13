@@ -61,9 +61,15 @@ delete(url: any)
  {
    return this.http.post(this.serverUrl+'auth/login',{email:email,password:password});
  }
- //upload file
-upload(file: any)
-{
-   return this.http.post(this.serverUrl+'upload/book',file);
-}
+
+ upload(file:any)
+  {
+    return this.http.post(this.serverUrl+'upload/book',file);
+  }
+
+  updateProduct(file:any)
+  {
+    return this.http.post(this.serverUrl+'updateProduct/book',file);
+  }
+
 }
